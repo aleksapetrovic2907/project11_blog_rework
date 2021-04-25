@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+
+  <div class="mb-3">
+      <%= form.label :title, class:"form-label"%>
+      <%= form.text_field :title, class:"form-control" %>
+    <div id="emailHelp" class="form-text">Must be at least 8 characters long.</div>
+  </div>
+  <div class="mb-3">
+      <%= form.label :content, class:"form-label"%>
+      <%= form.text_area :content, class:"form-control", rows:10 %>
+      <div id="emailHelp" class="form-text">Must be between 20 and 5000 characters long.</div>
+
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit class:"btn btn-primary mb-3" %>
 <% end %>

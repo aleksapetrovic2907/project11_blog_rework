@@ -1,14 +1,14 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+<div class="alert alert-success my-3" role="alert">
+  <%= notice %>
+</div>
+<% end %>
+
+<h2 class="my-5"><%= @article.title %></h2>
 
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+  <i><%= @article.content %></i>
 </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Edit', edit_article_path(@article), class:"btn btn-dark" %>
+<%= link_to 'Back', articles_path, class:"btn btn-dark"%>
