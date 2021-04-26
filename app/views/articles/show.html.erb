@@ -12,3 +12,11 @@
 
 <%= link_to 'Edit', edit_article_path(@article), class:"btn btn-dark" %>
 <%= link_to 'Back', articles_path, class:"btn btn-dark"%>
+
+<% if @article.comments.any? %>
+  <h2 class="my-5">Comment Section</h2>
+  <%= render @article.comments %>
+<% end %>
+
+  <h2 class="my-5">Add a Comment</h2>
+<%= render 'comments/form' %>

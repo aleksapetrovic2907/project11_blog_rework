@@ -1,0 +1,13 @@
+<%= form_with( model: [ @article, @article.comments.build ], local: true) do |form| %>
+
+  <div class="mb-3">
+      <%= form.label :author, class:"form-label"%>
+      <%= form.text_field :author, class:"form-control" %>
+  </div>
+  <div class="mb-3">
+      <%= form.label :content, class:"form-label"%>
+      <%= form.text_field :content, class:"form-control" %>
+  </div>
+
+  <%= form.submit class:"btn btn-primary mb-3"%>
+<% end %>

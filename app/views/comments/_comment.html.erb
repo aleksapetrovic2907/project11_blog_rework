@@ -1,0 +1,7 @@
+<div class="row my-3 ">
+    <div class="clearfix">
+        <strong><%= comment.author %>:</strong>
+        <span class="text-muted"><%= comment.content %></span>
+        <%= link_to "", article_comment_path(comment.article, comment), method: :delete, class: "btn-close float-end"%>
+    </div>
+</div>
